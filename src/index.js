@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CvDataProvider from './context/CvDataProvider';
+import GlobalStyles from './GlobalStyle';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CvDataProvider>
+      <GlobalStyles/>
+      <App />
+    </CvDataProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
