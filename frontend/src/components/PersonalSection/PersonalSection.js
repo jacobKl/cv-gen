@@ -1,14 +1,14 @@
 import React from 'react'
-import { PersonalWrapper } from './PersonalSection.styled'
 import PersonalInput from '../PersonalInput/PersonalInput'
-import { Row, Button, StyledH1, StyledH3 } from '../../GlobalStyle'
+import { Row, Button, StyledH1, StyledH3, SectionWrapper } from '../../GlobalStyle'
+import ImageUploader from '../ImageUploader/ImageUploader';
 
 
-function PersonalSection({prev,next}) {
+function PersonalSection({changeStep}) {
 
 
     return (
-        <PersonalWrapper>
+        <SectionWrapper>
             <StyledH1 center>Dane podstawowe</StyledH1>
             <StyledH3 center>Wypełnij wszystkie pola które chcesz i przejdź dalej!</StyledH3>
             <Row>
@@ -27,9 +27,11 @@ function PersonalSection({prev,next}) {
                 <PersonalInput rows={"5"} as="textarea" name="resume" label="O tobie" noresize></PersonalInput>
             </div>
             <Row end>
-                <Button onClick={() => next(1)} green>Dalej</Button>
+                <Button onClick={() => changeStep("/1")} green>Dalej</Button>
             </Row>
-        </PersonalWrapper>
+            <StyledH3 center>Wstaw swoje zdjęcie</StyledH3>
+            <ImageUploader></ImageUploader>
+        </SectionWrapper>
     )
 }
 

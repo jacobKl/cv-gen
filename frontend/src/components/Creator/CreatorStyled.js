@@ -6,11 +6,11 @@ export const CreatorPart = styled.div`
     width: 50%;
     height: 100%;
     display: flex;
+    max-height: 100vh;
     justify-content: center;
     @media (max-width: ${breakpoints.md}){
         width: 100%;
     }
-    margin-top: 20px;
     position: relative;
 `;
 

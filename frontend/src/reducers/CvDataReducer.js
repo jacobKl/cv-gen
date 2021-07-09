@@ -1,4 +1,4 @@
-import { UPDATE_PERSONAL, ADD_EDUCATION, LOCAL_STORAGE_BACKUP, EDIT_EDUCATION } from '../actions/index';
+import { UPDATE_PERSONAL, ADD_EDUCATION, LOCAL_STORAGE_BACKUP, EDIT_EDUCATION, SET_FILE_PATH } from '../actions/index';
 
 const eduPart = { name: "", from: "", to: "", position: "" }
 
@@ -31,6 +31,14 @@ const CvDataReducer = (state, action) => {
                 education: state.education.map(
                     (education, i ) => i === id ?  { ...education, [field]: payload } : education
                 )
+            }
+        case SET_FILE_PATH:
+            return {
+                ...state,
+                personal: {
+                    ...state.personal,
+                    imagePath: payload
+                }
             }
         default:
             return state

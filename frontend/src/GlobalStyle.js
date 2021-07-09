@@ -86,3 +86,13 @@ export const StyledH3 = styled.h3`
         text-align: center;
     `}
 `;
+
+
+export const SectionWrapper = styled.div`
+    width: 90%;
+    padding: 20px 60px;
+
+    @media (max-width: ${breakpoints.sm}){
+        padding: 20px;
+    }
+`;

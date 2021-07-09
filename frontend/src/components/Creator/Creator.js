@@ -3,6 +3,7 @@ import { CvData } from '../../context/CvDataProvider';
 import { CreatorPart } from './CreatorStyled';
 import PersonalSection from '../PersonalSection/PersonalSection';
 import EducationSection from '../EducationSection/EducationSection';
+import CustomizeSection from '../CustomizeSection/CustomizeSection';
 import { Route, useHistory } from 'react-router-dom';
 import { LOCAL_STORAGE_BACKUP} from '../../actions/index';
 
@@ -13,16 +14,17 @@ function Creator() {
 
     const { dispatch } = useContext( CvData )
 
-    const nextStep = (stepId) => {
+    const changeStep = (step) => {
         dispatch({ type: LOCAL_STORAGE_BACKUP });
-        history.push(`/${stepId}`)
+        history.push(step)
     }
 
 
     return (
         <CreatorPart>
-                <Route exact path="/"  render={() => (<PersonalSection next={nextStep} />)}/>
-                <Route exact path="/1"  component={EducationSection}/>
+                <Route exact path="/"  render={() => (<PersonalSection changeStep={changeStep} />)}/>
+                <Route exact path="/1"  render={() => (<EducationSection changeStep={changeStep} />)}/>
+                <Route exact path="/2" render={() => (<CustomizeSection changeStep={changeStep} />)} />
         </CreatorPart>
     )
 }

@@ -11,14 +11,15 @@ let baseData = {
         email: "",
         postcode: "",
         phone: "",
-        resume: ""
+        resume: "",
+        imagePath: "",
     },
     education: [
         {
             name: "",
-            from: 2018,
-            to: 2020,
-            position: "Ok"
+            from: "",
+            to: "",
+            position: ""
         }
     ]
 }

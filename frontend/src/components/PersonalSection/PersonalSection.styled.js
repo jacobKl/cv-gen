@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const PersonalWrapper = styled.div`
-    margin: 20px;
-    padding: 20px;
+    padding: 20px 60px;
     width: 100%;
 `
