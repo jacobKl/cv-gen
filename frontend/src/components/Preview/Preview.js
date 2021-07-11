@@ -17,7 +17,7 @@ function Preview() {
             <h3>{state.personal.phone}</h3>
             <h3>{state.personal.resume}</h3>
 
-            {state.education.map(item => (<div>{item.name}</div>))}
+            {state.education.map((item, i) => (<div key={i}>{item.name}</div>))}
         </PreviewWrapper>
     )
 }

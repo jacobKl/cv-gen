@@ -1,5 +1,9 @@
-export const UPDATE_PERSONAL = "UPDATE_PERSONAL";
+export const EDIT_PERSONAL = "UPDATE_PERSONAL";
 export const ADD_EDUCATION = "ADD_EDUCATION";
 export const LOCAL_STORAGE_BACKUP = "LOCAL_STORAGE_BACKUP";
 export const EDIT_EDUCATION = "EDIT_EDUCATION";
 export const SET_FILE_PATH = "SET_FILE_PATH";
+export const SET_ICON = "SET_ICON";
+export const SET_STEP = "SET_STEP";
+export const ADD_SKILL = "ADD_SKILL";
+export const EDIT_SKILL_NAME = "EDIT_SKILL_NAME"

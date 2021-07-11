@@ -32,5 +32,6 @@ export const StyledImageUploader = styled.div`
         font-size: 20px;
         color: ${props => props.fileOver ? "#333" : "#ccc"};
         transition: .4s;
+        text-align: center;
     }
 `;

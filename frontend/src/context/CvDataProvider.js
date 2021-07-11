@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from 'react'
+import React, { useReducer } from 'react'
 import CvDataReducer from '../reducers/CvDataReducer';
 
 export const CvData = React.createContext();
@@ -16,10 +16,18 @@ let baseData = {
     },
     education: [
         {
+            icon: "",
             name: "",
             from: "",
             to: "",
             position: ""
+        }
+    ],
+    skills: [
+        {
+            name: "Javascript",
+            steps: 1,
+            description: "Przykładowy opis" 
         }
     ]
 }

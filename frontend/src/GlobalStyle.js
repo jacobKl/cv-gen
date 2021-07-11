@@ -46,6 +46,10 @@ export const Row = styled.div`
     ${props => props.center && css`
         justify-content: center;
     `};
+
+    ${props => props.nmargin && css`
+        margin: 0 -5px;
+    `};
 `
 
 export const Button = styled.button`
@@ -90,9 +94,5 @@ export const StyledH3 = styled.h3`
 
 export const SectionWrapper = styled.div`
     width: 90%;
-    padding: 20px 60px;
-
-    @media (max-width: ${breakpoints.sm}){
-        padding: 20px;
-    }
+    padding: 20px;
 `;

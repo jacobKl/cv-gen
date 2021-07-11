@@ -37,7 +37,7 @@ function ImageUploader() {
 
     return (
         <StyledImageUploader onDrop={handleFileDrop} onDragOver={handleFileOver} onDragLeave={handleDragLeave} fileOver={isFileOver}>
-            <i class="fas fa-file-upload"></i>
+            <i className="fas fa-file-upload"></i>
             {state.personal.imagePath ? <p>Zuploadowano zdjęcie {state.personal.imagePath}</p> : <p>Przeciagnij tutaj plik.</p>}            
         </StyledImageUploader>
     )

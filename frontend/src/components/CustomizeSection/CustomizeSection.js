@@ -8,7 +8,7 @@ function CustomizeSection({changeStep}) {
             <StyledH1 center>Dostosuj swoje CV</StyledH1>
             <StyledH3 center>Wybierz warianty kolorystyczne, szablon oraz czcionkę</StyledH3>
             <Row start>
-                <Button onClick={() => changeStep("/1")} green>Wróć</Button>
+                <Button onClick={() => changeStep("/2")} green>Wróć</Button>
             </Row>
         </SectionWrapper>
     )
