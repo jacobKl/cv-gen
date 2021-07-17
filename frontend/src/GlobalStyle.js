@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     *{
         box-sizing: border-box;
         font-family: Roboto;
+        transition: .4s;
     }
 `
 export default GlobalStyle;
@@ -22,7 +23,22 @@ export const breakpoints = {
 
 export const themes = {
     light: {
-        
+        font: "#555",
+        fontLight: "#888",
+        highlight: "#45D562",
+        foreground: "#fff",
+        background: "#f4f4f4",
+        thirdary: "#eee",
+        border: "#ddd"
+    },
+    dark: {
+        font: "#eee",
+        fontLight: "#aaa",
+        highlight: "#45D562",
+        foreground: "#333",
+        background: "#121212",
+        thirdary: "#444",
+        border: "#111"
     }
 }
 
@@ -65,14 +81,14 @@ export const Button = styled.button`
     `}
 
     ${props => props.light && css`
-        color: #555;
-        background: #f4f4f4;
+        color: ${props => props.theme.font};
+        background: ${props => props.theme.background};
     `}
 `
 
 export const StyledH1 = styled.h1`
     font-size: 3rem;
-    color: #555;
+    color: ${props => props.theme.font};
     line-height: 1.1;
     margin: 0;
 
@@ -93,6 +109,9 @@ export const StyledH3 = styled.h3`
 
 
 export const SectionWrapper = styled.div`
-    width: 90%;
-    padding: 20px;
+    padding: 20px 40px;
+    width: 100%;
+    max-height: 100vh;
+    height: 100%;
+    overflow-y: auto;
 `;

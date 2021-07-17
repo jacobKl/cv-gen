@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledSkillButton = styled.button`
-    background: #fff;
-    border: 1px solid #ddd;
+    background: ${props => props.theme.foreground};
+    border: 1px solid ${props => props.theme.border};
     height: 40px;
     border-radius: 20px;
     display: flex;

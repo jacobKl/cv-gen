@@ -45,7 +45,7 @@ const CvDataReducer = (state, action) => {
             return {
                 ...state,
                 [dispatchTo]: state.[dispatchTo].map(
-                    (item, i) => i === id ? {...item, icon: iconId + 1} : item
+                    (item, i) => i === id ? {...item, icon: iconId} : item
                 )
             }
         case SET_STEP:

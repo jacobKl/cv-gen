@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CvDataProvider from './context/CvDataProvider';
+import ThemeContextProvider from './context/ThemeContextProvider';
 import GlobalStyles from './GlobalStyle';
 
 ReactDOM.render(
   <React.StrictMode>
     <CvDataProvider>
-      <GlobalStyles/>
-      <App />
+      <ThemeContextProvider>
+        <GlobalStyles/>
+        <App />
+      </ThemeContextProvider>
     </CvDataProvider>
   </React.StrictMode>,
   document.getElementById('root')

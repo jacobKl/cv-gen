@@ -11,8 +11,8 @@ function SkillsSection({ changeStep }) {
   const { state, dispatch } = useContext(CvData);
 
   const addSkill = (skillName) => {
-    dispatch({type: ADD_SKILL, payload: skillName})
-  }
+    dispatch({ type: ADD_SKILL, payload: skillName });
+  };
 
   return (
     <SectionWrapper>

@@ -1,4 +1,4 @@
-import styled,{ keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const jump = keyframes`
     0%{
@@ -11,27 +11,27 @@ const jump = keyframes`
 `;
 
 export const StyledImageUploader = styled.div`
-    height: 200px;
-    width: 100%;
-    border-radius: 15px;
-    background: #eee;
-    border: 4px dashed #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  height: 200px;
+  width: 100%;
+  border-radius: 15px;
+  background: ${(props) => props.theme.thirdary};
+  border: 4px dashed ${(props) => props.theme.border};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    i{
-        font-size: 4rem;
-        animation: ${props => props.fileOver ? jump : ""} 1s infinite linear;
-        color: ${props => props.fileOver ? "#333" : "#ccc"};
-        transition: .4s;
-    }
+  i {
+    font-size: 4rem;
+    animation: ${(props) => (props.fileOver ? jump : "")} 1s infinite linear;
+    color: ${(props) => (props.fileOver ? props.theme.font : "#ccc")};
+    transition: 0.4s;
+  }
 
-    p{
-        font-size: 20px;
-        color: ${props => props.fileOver ? "#333" : "#ccc"};
-        transition: .4s;
-        text-align: center;
-    }
+  p {
+    font-size: 20px;
+    color: ${(props) => (props.fileOver ? props.theme.font : "#ccc")};
+    transition: 0.4s;
+    text-align: center;
+  }
 `;

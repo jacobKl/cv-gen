@@ -22,6 +22,7 @@ const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
+
 `
 
 export default App
